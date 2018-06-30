@@ -15,3 +15,9 @@ export PATH
 ```
 
 The normal `~/.dotnet/tools` is not recognized by `zsh`.
+
+
+## some quick notes
+
+dotnet pack -c release -o ./   
+dotnet tool install -g YourTool --add-source ./                      
