@@ -34,32 +34,56 @@ namespace Genyman.Core
 		static void InternalWrite(LogLevel level, string message)
 		{
 			if (Verbosity == Verbosity.Quiet) return;
+			if (Verbosity == Verbosity.Normal && level == LogLevel.Debug) return;
+			
+			var messages = message.Split(Environment.NewLine);
+			foreach (var line in messages)
+			{
+				var prefix = string.Empty;
+				if (Verbosity == Verbosity.Diagnostic)
+					prefix = $"[{LevelPrefix(level)}] ";
+				switch (level)
+				{
+					case LogLevel.Fatal:
+						Console.ForegroundColor = ConsoleColor.DarkRed;
+						break;
+					case LogLevel.Error:
+						Console.ForegroundColor = ConsoleColor.Red;
+						break;
+					case LogLevel.Warning:
+						Console.ForegroundColor = ConsoleColor.Yellow;
+						break;
+					case LogLevel.Information:
+						break;
+					case LogLevel.Debug:
+						Console.ForegroundColor = ConsoleColor.DarkGray;
+						break;
+				}
 
-			var prefix = string.Empty;
-			if (Verbosity == Verbosity.Diagnostic)
-				prefix = $"[{level.ToString().Substring(0, 3).ToUpper()}] ";
-			switch (level)
+				Console.WriteLine($"{prefix}{line}");
+				Console.ResetColor();
+				if (level == LogLevel.Fatal)
+					Environment.Exit(-1);
+			}
+		}
+
+		static string LevelPrefix(LogLevel logLevel)
+		{
+			switch (logLevel)
 			{
 				case LogLevel.Fatal:
-					Console.ForegroundColor = ConsoleColor.DarkRed;
-					break;
+					return "FTL";
 				case LogLevel.Error:
-					Console.ForegroundColor = ConsoleColor.Red;
-					break;
+					return "ERR";
 				case LogLevel.Warning:
-					Console.ForegroundColor = ConsoleColor.Yellow;
-					break;
+					return "WRN";
 				case LogLevel.Information:
-					break;
+					return "INF";
 				case LogLevel.Debug:
-					Console.ForegroundColor = ConsoleColor.DarkGray;
-					break;
+					return "DBG";
 			}
 
-			Console.WriteLine($"{prefix}{message}");
-			Console.ResetColor();
-			if (level == LogLevel.Fatal)
-				Environment.Exit(-1);
+			return null;
 		}
 	}
 

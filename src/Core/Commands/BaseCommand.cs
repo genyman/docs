@@ -2,7 +2,7 @@
 
 namespace Genyman.Core.Commands
 {
-	internal abstract class BaseCommand : CommandLineApplication
+	public abstract class BaseCommand : CommandLineApplication
 	{
 		protected BaseCommand() : base(false)
 		{

@@ -19,6 +19,7 @@
 	  <Content Include="Templates\**">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
+	  <Folder Include="Helpers" />
 	  <Folder Include="Templates" />
   </ItemGroup>
 </Project>
