@@ -20,13 +20,13 @@ build_script:
 
     dotnet pack -c release -o .\
 
-    dotnet nuget push *.nupkg -k {nuget_apikey} -s https://api.nuget.org/v3/index.json
+    dotnet nuget push *.nupkg -k %nuget_apikey% -s https://api.nuget.org/v3/index.json
 
     cd ..\core
 
     dotnet pack -c release -o .\
 
-    dotnet nuget push *.nupkg -k {nuget_apikey} -s https://api.nuget.org/v3/index.json
+    dotnet nuget push *.nupkg -k %nuget_apikey% -s https://api.nuget.org/v3/index.json
 artifacts:
 - path: '**\*.nupkg'
   name: Nupkg
