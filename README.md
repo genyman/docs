@@ -1,7 +1,7 @@
 # genyman
 Code Generator tools for .net core CLI
 
-WORK IN PROGRESS
+WORK IN PROGRESS!!! Wiki and site will be available soon!
 
 
 # zsh
