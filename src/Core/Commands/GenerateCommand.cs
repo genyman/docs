@@ -14,6 +14,7 @@ namespace Genyman.Core.Commands
 		public GenerateCommand()
 		{
 			ExtendedHelpText = "\nPowered by Genyman (https://genyman.net)\n";
+			
 
 			Input = Argument<string>("input", "File to use for generation", argument => { });
 		}
@@ -28,7 +29,7 @@ namespace Genyman.Core.Commands
 
 			if (Input.Value.IsNullOrEmpty())
 			{
-				Description = metaData.Description;
+				Description = $"{metaData.Description} (Version {metaData.Version})";
 				Name = metaData.Identifier.ToLower();
 				ShowHelp();
 				return -1;

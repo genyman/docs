@@ -41,7 +41,7 @@ namespace Genyman.Core.Commands
 			var configuration = new GenymanConfiguration<TConfiguration>
 			{
 				Genyman = metadata,
-				Configuration = new TTemplate()
+				Configuration = new TTemplate(),
 			};
 
 			var output = "";
