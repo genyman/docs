@@ -1,0 +1,11 @@
+{
+    "genyman": {
+        "packageId": "Genyman",
+        "version": "0.0.1",
+        "nugetSource": ""
+    },
+    "configuration": {
+        "prefix": "YourPrefix",
+        "toolName": "YourToolName"
+    }
+}
