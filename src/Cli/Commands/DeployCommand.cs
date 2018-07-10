@@ -19,9 +19,13 @@ namespace Genyman.Cli.Commands
 			SourceOption = Option("--source", "Deploys to custom nuget server", CommandOptionType.SingleOrNoValue, option =>
 			{	
 			}, false);
+			SourceOption = Option("--apikey", "Use ApiKey to deploy to nuget server", CommandOptionType.SingleOrNoValue, option =>
+			{	
+			}, false);
 		}
 		
 		public CommandOption SourceOption { get; }
+		public CommandOption ApiKeyOption { get; }
 		
 
 		protected override int Execute()
@@ -78,6 +82,15 @@ namespace Genyman.Cli.Commands
 					Log.Fatal("When specifying --source your need to add a valid source (--source=https://{YourUrl})");
 				}
 				push.WithArgument("--source", SourceOption.Value());
+			}
+			
+			if (ApiKeyOption.HasValue())
+			{
+				if (string.IsNullOrEmpty(ApiKeyOption.Value()))
+				{
+					Log.Fatal("When specifying --apikey your need to add a valid api key (--apikey=YourKey");
+				}
+				push.WithArgument("--api-key", ApiKeyOption.Value());
 			}
 
 			push.ReceiveOutput(s =>
