@@ -1,10 +1,3 @@
 # Genyman
 
-Code Generator tools for .net core CLI
-
-- Core Package
-- CLI
-
-### Work in progress
-
-Documentation will be added soon!
+You can find the [documentation](https://genyman.github.io/docs/) of Genyman here. This is a contineous work in progress. Provide any feedback please!
