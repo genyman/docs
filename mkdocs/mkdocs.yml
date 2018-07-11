@@ -19,7 +19,7 @@ theme:
   favicon: 'images/favicon.ico'
   palette:
     primary: 'blue grey'
-    accent: 'blue grey'
+    accent: 'blue'
 
 # Extensions
 markdown_extensions:
@@ -28,3 +28,9 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+
+# Pages
+pages:
+  - 'Introduction': 'index.md'
+  - 'Getting started': 'getting_started.md'
+  - 'Troubleshooting': 'troubleshooting.md'

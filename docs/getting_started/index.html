@@ -1,0 +1,657 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Genyman - A .net core cli code generator">
+      
+      
+        <link rel="canonical" href="https://genyman.github.io/getting_started/">
+      
+      
+        <meta name="author" content="Stefan de Vogelaere">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.1">
+    
+    
+      
+        <title>Getting started - Genyman</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#getting-started" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://genyman.github.io/" title="Genyman" class="md-header-nav__button md-logo">
+          
+            <img src="../images/genyman.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Genyman
+              </span>
+              <span class="md-header-nav__topic">
+                Getting started
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/genyman/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      genyman/docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../images/genyman.svg" width="48" height="48">
+      
+    </span>
+    Genyman
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/genyman/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      genyman/docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Getting started
+      </label>
+    
+    <a href="./" title="Getting started" class="md-nav__link md-nav__link--active">
+      Getting started
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-command" title="NEW command" class="md-nav__link">
+    NEW command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-generator-solution" title="Create a new generator solution" class="md-nav__link">
+    Create a new generator solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template" title="Template" class="md-nav__link">
+    Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator" title="Generator" class="md-nav__link">
+    Generator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates" title="Templates" class="md-nav__link">
+    Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-generator" title="Test your generator" class="md-nav__link">
+    Test your generator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" title="Next" class="md-nav__link">
+    Next
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-command" title="NEW command" class="md-nav__link">
+    NEW command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-generator-solution" title="Create a new generator solution" class="md-nav__link">
+    Create a new generator solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template" title="Template" class="md-nav__link">
+    Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator" title="Generator" class="md-nav__link">
+    Generator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates" title="Templates" class="md-nav__link">
+    Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-generator" title="Test your generator" class="md-nav__link">
+    Test your generator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" title="Next" class="md-nav__link">
+    Next
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/genyman/docs/edit/master/mkdocs/docs/getting_started.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>Now that you have installed <code>genyman</code> it is time to create your first generator. All generators are in fact .NET Core Tools but <code>genyman</code> provides you an easy way to build and execute the generators. In fact, <code>genyman</code> itself contains a code generator, more specific, to create a new generator.</p>
+<h2 id="new-command">NEW command<a class="headerlink" href="#new-command" title="Permanent link">&para;</a></h2>
+<p>To create a new code generator, create an empty folder, and then execute:</p>
+<div class="codehilite"><pre><span></span>genyman new
+</pre></div>
+
+
+<p>This will produce a <code>gm-genyman.json</code> file. This gives you an idea on what <code>genyman</code> is; it will use configuration files to generate, or execute code. Take a look at the produced <code>.json</code> file:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;genyman&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;packageId&quot;</span><span class="p">:</span> <span class="s2">&quot;Genyman&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.5&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nugetSource&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;YourPrefix&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;toolName&quot;</span><span class="p">:</span> <span class="s2">&quot;YourToolName&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>All <code>genyman</code> configuration files will have two parts; the first structure is <code>genyman</code>. This will contain the name of the package that is used to execute this configuration file, together with the <code>version</code> used to create the file and a <code>nugetSource</code> that is used to resolve the package (leave empty for the default <code>nuget.org</code>).</p>
+<p>The second structure is <code>configuration</code>. Hereunder you will find the specific configuration parameters for the generator. In this case two values are available:</p>
+<ul>
+<li><code>prefix</code>: this is actually the prefix used in the package identifier, mostly the username or organization name of the pacakge.</li>
+<li><code>toolName</code>: the specific name of the code generator you are going to build.</li>
+</ul>
+<p>For this tutorial we will enter the following:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;genyman&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;packageId&quot;</span><span class="p">:</span> <span class="s2">&quot;Genyman&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.5&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nugetSource&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;Tutorial&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;toolName&quot;</span><span class="p">:</span> <span class="s2">&quot;FirstGenerator&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="create-a-new-generator-solution">Create a new generator solution<a class="headerlink" href="#create-a-new-generator-solution" title="Permanent link">&para;</a></h2>
+<p>As said, the <code>new</code> command from the genyman cli itself is a generator. The way you can execute the generator is just running</p>
+<div class="codehilite"><pre><span></span>genyman gm-genyman.json
+</pre></div>
+
+
+<p>This will create a <code>src</code> folder which contains a template solution for you to create a new code generator.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p>If you take a look at the solution, you will find an <code>Implementation</code> folder with a <code>Configuration.cs</code> file. This is a placeholder class for your configuration parameters. Just like the configuration parameters we had to fill in for our new template. Basically you just add public properties to this class. Later these properties will be translated to parameters in you configuration file.</p>
+<p>For this tutorial we are going to keep it simple - for a better sample just check the code in the genyman-cli repository.</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Configuration</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Value1</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Value2</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
+<p>You saw that running the <code>new</code> command produced a pre-filled configuration file. In order to get the same behavior you set properties for a <code>Configuration</code> instance that is created in the <code>NewTemplate.cs</code> class:</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">NewTemplate</span> <span class="p">:</span> <span class="n">Configuration</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">NewTemplate</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Value1</span> <span class="p">=</span> <span class="s">&quot;FirstSampleValue&quot;</span><span class="p">;</span>
+        <span class="n">Value2</span> <span class="p">=</span> <span class="s">&quot;SecondSampleValue&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>This will later produce a configuration file with these values pre-filled.</p>
+<h2 id="generator">Generator<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h2>
+<p>Finally, the <code>Generator.cs</code> is the location where the real work has to be done. Following skeleton is your starting point:</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Generator</span> <span class="p">:</span> <span class="n">GenymanGenerator</span><span class="p">&lt;</span><span class="n">Configuration</span><span class="p">&gt;</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Execute</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">ProcessHandlebarTemplates</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>In this <code>Execute</code> you write the necessary code for your code generator. This method is called by <code>genyman</code> and the <code>Configuration</code> property of the class is a pre-filled <code>Configuration</code> instance, having the values of the given configuration file (if not changed by the user, it will contain the default property values defined in the <code>NewTemplate.cs</code> class).</p>
+<p>You can use whatever technique you want to generate code, but the easiest way to do is using <a href="https://handlebarsjs.com/">Handlebars</a> templates. These templates need to be added in the <code>Templates</code> folder in your solution.</p>
+<h2 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h2>
+<p>In the <code>Templates</code> folders you can add any file you want to be included for your generator. The <code>csproj</code> is configured to exclude these files for compilation, but to include these as content files later in your package. These files can contain any of the basic Handlebars identifiers, helpers, and even more, the file itself can have these identifiers. For a good example, check the <code>genyman</code> cli repository.</p>
+<p>For this tutorial we will add a simple csharp file.</p>
+<div class="codehilite"><pre><span></span><span class="k">namespace</span> <span class="nn">OurGenyman.Tutorial</span><span class="p">;</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Sample</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">FirstValue</span> <span class="p">=</span> <span class="s">&quot;{{ Value1 }}&quot;</span><span class="p">;</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">SecondValue</span> <span class="p">=</span> <span class="s">&quot;{{ Value2 }}&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Just name this file <code>MyClass.cs</code>.</p>
+<h2 id="test-your-generator">Test your generator<a class="headerlink" href="#test-your-generator" title="Permanent link">&para;</a></h2>
+<p>That's it! We are now ready to test our generator. As said, the created solution is just a plain .NET Core console application, packed as a tool. That means you can just run/debug the console application; in your favourite IDE you can start the application with the argument <code>new</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To test your generator, a good practice is to use a new folder outside your solution, and put this as the working directory when you run your program.</p>
+</div>
+<p>This will produce a <code>.json</code> file that contains your template values. Change these values at will. Next run/debug your application again, but this time provide the <code>json</code> file as the argument of your application.</p>
+<p>You will see that the output is a MyClass.cs file with the <code>Value1</code> and <code>Value2</code> values replaced.</p>
+<p>You can put breakpoints in the <code>Execute</code> method of your generator.</p>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p>This is a quick overview on how you can create a new generator. Of course there is much more you can do; <code>genyman</code> has some more nice features you can use. You will find out about these feature in the various sections of this documentation.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../troubleshooting/" title="Troubleshooting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Troubleshooting
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 Stefan de Vogelaere
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
