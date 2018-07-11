@@ -19,6 +19,9 @@ You can invoke the tool using the following command: genyman
 Tool 'genyman' (version 'x.x.x') was successfully installed.
 ```
 
+!!! note "Getting help"  
+    When you execute `genyman` or `genyman --help` you will get info about all available options.
+
 ## How to update
 
 To update the tool to the latest version:

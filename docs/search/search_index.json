@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Genyman\n\n\nGenyman is a .NET Core Global tool, a new .NET Core feature since the release of version 2.1. You can find more in the \nofficial document\n.\n\n\nWith Genyman it is possible to easily build code generation tools that uses a configuration file as input. This way you can use these files inside your dev environment and generate code over and over again with the same settings.\n\n\nHow to install\n\n\nTo install \ngenyman\n you need to execute the following command in your console / command prompt:\n\n\ndotnet tool install -g genyman\n\n\n\n\n\nAfter installation you will be prompted:\n\n\nYou can invoke the tool using the following command: genyman\nTool \ngenyman\n \n(\nversion \nx.x.x\n)\n was successfully installed.\n\n\n\n\n\nHow to update\n\n\nTo update the tool to the latest version:\n\n\ndotnet tool update -g genyman\n\n\n\n\n\n\n\nUpdate\n\n\nWe will add an indication when running \ngenyman\n if you are not running the latest version in a future release.\n\n\n\n\nHow to uninstall\n\n\nTo remove \ngenyman\n from your system:\n\n\ndotnet tool uninstall -g genyman", 
+            "text": "Welcome to Genyman\n\n\nGenyman is a .NET Core Global tool, a new .NET Core feature since the release of version 2.1. You can find more in the \nofficial document\n.\n\n\nWith Genyman it is possible to easily build code generation tools that uses a configuration file as input. This way you can use these files inside your dev environment and generate code over and over again with the same settings.\n\n\nHow to install\n\n\nTo install \ngenyman\n you need to execute the following command in your console / command prompt:\n\n\ndotnet tool install -g genyman\n\n\n\n\n\nAfter installation you will be prompted:\n\n\nYou can invoke the tool using the following command: genyman\nTool \ngenyman\n \n(\nversion \nx.x.x\n)\n was successfully installed.\n\n\n\n\n\n\n\nGetting help\n\n\nWhen you execute \ngenyman\n or \ngenyman --help\n you will get info about all available options.\n\n\n\n\nHow to update\n\n\nTo update the tool to the latest version:\n\n\ndotnet tool update -g genyman\n\n\n\n\n\n\n\nUpdate\n\n\nWe will add an indication when running \ngenyman\n if you are not running the latest version in a future release.\n\n\n\n\nHow to uninstall\n\n\nTo remove \ngenyman\n from your system:\n\n\ndotnet tool uninstall -g genyman", 
             "title": "Welcome to Genyman"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#how-to-install", 
-            "text": "To install  genyman  you need to execute the following command in your console / command prompt:  dotnet tool install -g genyman  After installation you will be prompted:  You can invoke the tool using the following command: genyman\nTool  genyman   ( version  x.x.x )  was successfully installed.", 
+            "text": "To install  genyman  you need to execute the following command in your console / command prompt:  dotnet tool install -g genyman  After installation you will be prompted:  You can invoke the tool using the following command: genyman\nTool  genyman   ( version  x.x.x )  was successfully installed.   Getting help  When you execute  genyman  or  genyman --help  you will get info about all available options.", 
             "title": "How to install"
         }, 
         {

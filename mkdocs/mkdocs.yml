@@ -7,6 +7,7 @@ site_url: 'https://genyman.github.io/'
 # Repository
 repo_name: 'genyman/docs'
 repo_url: 'https://github.com/genyman/docs'
+edit_uri: 'edit/master/mkdocs/docs'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 Stefan de Vogelaere'
