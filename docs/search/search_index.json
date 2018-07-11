@@ -76,6 +76,101 @@
             "title": "Next"
         }, 
         {
+            "location": "/reference/genyman-cli/", 
+            "text": "genyman cli tool\n\n\nThe cli tool is the main tool of \ngenyman\n. \n\n\nFile argument\n\n\ngenyman your-config.json\n\n\nThis argument is used to use the given file as input for the code generator specified in that configuration file. The cli is responsible for downloading, installing and executing the genyman global tool.\n\n\nNew Command\n\n\ngenyman new\n\n\nThis generates a new code generator solution template.\n\n\njson option\n\n\ngenyman new --json\n\n\nThe json file format is the default format for configuration files. This option is now available for future support of other formats such as xml and yaml.\n\n\nfile option\n\n\ngenyman new --file=\nYOUR_FILENAME\n\n\nIf not specified the default configuration file is created with the name \ngm-genyman.json\n. If you want to use another name you can use this option.\n\n\nDeploy Command\n\n\ngenyman deploy\n\n\nThe deploy command will build your code generator tool, pack it to a nupkg file and then push it to the specified, or default Nuget source.\n\n\nsource option\n\n\ngenyman deploy --source=\nYOUR_NUGET_SOURCE_URL\n\n\nIf you want to deploy to a private or local Nuget source, you can specify it with the source option.\n\n\napikey option\n\n\ngenyman deploy --apikey=\nYOUR_API_KEY\n\n\nWhen you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.\n\n\nOptions\n\n\nFollowing options are available for all commands.\n\n\noverwrite\n\n\n--overwrite\n\n\nAll commands that generates files, will be able to overwrite existing files when this option is added. Otherwise a warning will be displayed.\n\n\ndiagnostic\n\n\n--diagnostic\n\n\nThis will show you all the Debug log lines together with the regular Info, Warning, Error and Fatal log lines.\n\n\nquiet\n\n\n--quiet\n\n\nIf you don't want a single log line to appear in the console, you can use this option.", 
+            "title": "Genyman Cli"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#genyman-cli-tool", 
+            "text": "The cli tool is the main tool of  genyman .", 
+            "title": "genyman cli tool"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#file-argument", 
+            "text": "genyman your-config.json  This argument is used to use the given file as input for the code generator specified in that configuration file. The cli is responsible for downloading, installing and executing the genyman global tool.", 
+            "title": "File argument"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#new-command", 
+            "text": "genyman new  This generates a new code generator solution template.", 
+            "title": "New Command"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#json-option", 
+            "text": "genyman new --json  The json file format is the default format for configuration files. This option is now available for future support of other formats such as xml and yaml.", 
+            "title": "json option"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#file-option", 
+            "text": "genyman new --file= YOUR_FILENAME  If not specified the default configuration file is created with the name  gm-genyman.json . If you want to use another name you can use this option.", 
+            "title": "file option"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#deploy-command", 
+            "text": "genyman deploy  The deploy command will build your code generator tool, pack it to a nupkg file and then push it to the specified, or default Nuget source.", 
+            "title": "Deploy Command"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#source-option", 
+            "text": "genyman deploy --source= YOUR_NUGET_SOURCE_URL  If you want to deploy to a private or local Nuget source, you can specify it with the source option.", 
+            "title": "source option"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#apikey-option", 
+            "text": "genyman deploy --apikey= YOUR_API_KEY  When you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.", 
+            "title": "apikey option"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#options", 
+            "text": "Following options are available for all commands.", 
+            "title": "Options"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#overwrite", 
+            "text": "--overwrite  All commands that generates files, will be able to overwrite existing files when this option is added. Otherwise a warning will be displayed.", 
+            "title": "overwrite"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#diagnostic", 
+            "text": "--diagnostic  This will show you all the Debug log lines together with the regular Info, Warning, Error and Fatal log lines.", 
+            "title": "diagnostic"
+        }, 
+        {
+            "location": "/reference/genyman-cli/#quiet", 
+            "text": "--quiet  If you don't want a single log line to appear in the console, you can use this option.", 
+            "title": "quiet"
+        }, 
+        {
+            "location": "/reference/genyman-core/", 
+            "text": "genyman core library\n\n\nThe genyman core library is, as the name is saying it, the core of the genyman tool. It is referenced in every code generator and contains all the functionality to easily build code generators.", 
+            "title": "Genyman Core"
+        }, 
+        {
+            "location": "/reference/genyman-core/#genyman-core-library", 
+            "text": "The genyman core library is, as the name is saying it, the core of the genyman tool. It is referenced in every code generator and contains all the functionality to easily build code generators.", 
+            "title": "genyman core library"
+        }, 
+        {
+            "location": "/reference/handlebars-helpers/", 
+            "text": "Handlebars Helpers\n\n\nWithin the Genyman Core Library there are severall Handlebars Helpers to make it easier to generate code.\n\n\nCSharp Helpers\n\n\nString Helpers", 
+            "title": "Handlebars Helpers"
+        }, 
+        {
+            "location": "/reference/handlebars-helpers/#handlebars-helpers", 
+            "text": "Within the Genyman Core Library there are severall Handlebars Helpers to make it easier to generate code.", 
+            "title": "Handlebars Helpers"
+        }, 
+        {
+            "location": "/reference/handlebars-helpers/#csharp-helpers", 
+            "text": "", 
+            "title": "CSharp Helpers"
+        }, 
+        {
+            "location": "/reference/handlebars-helpers/#string-helpers", 
+            "text": "", 
+            "title": "String Helpers"
+        }, 
+        {
             "location": "/troubleshooting/", 
             "text": "Troubleshooting\n\n\nzsh\n\n\nWhen using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the \n.zshrc\n file and add:\n\n\npath\n+=(\n/Users/YOUR_USER_NAME/.dotnet/tools\n)\n\n\nexport\n PATH\n\n\n\n\n\nThe normal \n~/.dotnet/tools\n is not recognized by \nzsh\n.", 
             "title": "Troubleshooting"
