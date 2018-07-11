@@ -1,10 +1,18 @@
-# genyman
+# Genyman
+
 Code Generator tools for .net core CLI
 
-WORK IN PROGRESS!!! Wiki and site will be available soon!
+- Core Package
+- CLI
+
+### Work in progress
+
+Documentation will be added soon!
 
 
-# zsh
+### Some notes to remember
+
+#### zsh
 
 When using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS.
 For the global tools to work you need to edit the `.zshrc` file and add:
