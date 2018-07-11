@@ -1,0 +1,14 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to Genyman\n\n\nTODO", 
+            "title": "Welcome to Genyman"
+        }, 
+        {
+            "location": "/#welcome-to-genyman", 
+            "text": "TODO", 
+            "title": "Welcome to Genyman"
+        }
+    ]
+}

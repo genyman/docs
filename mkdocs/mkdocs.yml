@@ -1,0 +1,30 @@
+# Project information
+site_name: 'Genyman'
+site_description: 'Genyman - A .net core cli code generator'
+site_author: 'Stefan de Vogelaere'
+site_url: 'https://genyman.github.io/'
+
+# Repository
+repo_name: 'genyman/core'
+repo_url: 'https://github.com/genyman/core'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 Stefan de Vogelaere'
+
+# Configuration
+theme: 
+  name: material
+  logo: 'images/genyman.svg'
+  favicon: 'images/favicon.ico'
+  palette:
+    primary: 'blue grey'
+    accent: 'blue grey'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - toc:
+      permalink: true
