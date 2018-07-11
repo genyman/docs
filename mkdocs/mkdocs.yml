@@ -5,8 +5,8 @@ site_author: 'Stefan de Vogelaere'
 site_url: 'https://genyman.github.io/'
 
 # Repository
-repo_name: 'genyman/core'
-repo_url: 'https://github.com/genyman/core'
+repo_name: 'genyman/docs'
+repo_url: 'https://github.com/genyman/docs'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 Stefan de Vogelaere'
@@ -25,6 +25,5 @@ markdown_extensions:
   - admonition
   - codehilite:
       guess_lang: false
-      linenums: true
   - toc:
       permalink: true

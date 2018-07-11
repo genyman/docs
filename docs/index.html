@@ -170,7 +170,7 @@
   
 
 
-  <a href="https://github.com/genyman/core/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/genyman/docs/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -179,7 +179,7 @@
       </div>
     
     <div class="md-source__repository">
-      genyman/core
+      genyman/docs
     </div>
   </a>
 
@@ -219,7 +219,7 @@
   
 
 
-  <a href="https://github.com/genyman/core/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/genyman/docs/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -228,7 +228,7 @@
       </div>
     
     <div class="md-source__repository">
-      genyman/core
+      genyman/docs
     </div>
   </a>
 
@@ -250,10 +250,65 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Welcome to Genyman
+      </label>
+    
     <a href="." title="Welcome to Genyman" class="md-nav__link md-nav__link--active">
       Welcome to Genyman
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install" title="How to install" class="md-nav__link">
+    How to install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-update" title="How to update" class="md-nav__link">
+    How to update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-uninstall" title="How to uninstall" class="md-nav__link">
+    How to uninstall
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
   </li>
 
     
@@ -274,6 +329,36 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install" title="How to install" class="md-nav__link">
+    How to install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-update" title="How to update" class="md-nav__link">
+    How to update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-uninstall" title="How to uninstall" class="md-nav__link">
+    How to uninstall
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -284,11 +369,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/genyman/core/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/genyman/docs/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="welcome-to-genyman">Welcome to Genyman<a class="headerlink" href="#welcome-to-genyman" title="Permanent link">&para;</a></h1>
-<p>TODO</p>
+<p>Genyman is a .NET Core Global tool, a new .NET Core feature since the release of version 2.1. You can find more in the <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">official document</a>.</p>
+<p>With Genyman it is possible to easily build code generation tools that uses a configuration file as input. This way you can use these files inside your dev environment and generate code over and over again with the same settings.</p>
+<h2 id="how-to-install">How to install<a class="headerlink" href="#how-to-install" title="Permanent link">&para;</a></h2>
+<p>To install <code>genyman</code> you need to execute the following command in your console / command prompt:</p>
+<div class="codehilite"><pre><span></span>dotnet tool install -g genyman
+</pre></div>
+
+
+<p>After installation you will be prompted:</p>
+<div class="codehilite"><pre><span></span>You can invoke the tool using the following command: genyman
+Tool <span class="s1">&#39;genyman&#39;</span> <span class="o">(</span>version <span class="s1">&#39;x.x.x&#39;</span><span class="o">)</span> was successfully installed.
+</pre></div>
+
+
+<h2 id="how-to-update">How to update<a class="headerlink" href="#how-to-update" title="Permanent link">&para;</a></h2>
+<p>To update the tool to the latest version:</p>
+<div class="codehilite"><pre><span></span>dotnet tool update -g genyman
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Update</p>
+<p>We will add an indication when running <code>genyman</code> if you are not running the latest version in a future release.</p>
+</div>
+<h2 id="how-to-uninstall">How to uninstall<a class="headerlink" href="#how-to-uninstall" title="Permanent link">&para;</a></h2>
+<p>To remove <code>genyman</code> from your system:</p>
+<div class="codehilite"><pre><span></span>dotnet tool uninstall -g genyman
+</pre></div>
                 
                   
                 
@@ -305,6 +417,27 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="troubleshooting/" title="Troubleshooting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Troubleshooting
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
