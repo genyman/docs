@@ -21,6 +21,11 @@ theme:
     primary: 'blue grey'
     accent: 'blue'
 
+# Google Analytics
+google_analytics:
+  - 'UA-37056204-9'
+  - 'auto'
+
 # Extensions
 markdown_extensions:
   - admonition
