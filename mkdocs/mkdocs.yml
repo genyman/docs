@@ -43,3 +43,4 @@ pages:
     - 'Genyman Core': 'reference/genyman-core.md'
     - 'Handlebars Helpers': 'reference/handlebars-helpers.md'
 - 'Troubleshooting': 'troubleshooting.md'
+- 'Community': 'community.md'

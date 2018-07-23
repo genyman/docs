@@ -184,6 +184,21 @@
             "location": "/troubleshooting/#zsh", 
             "text": "When using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the  .zshrc  file and add:  path +=( /Users/YOUR_USER_NAME/.dotnet/tools )  export  PATH  The normal  ~/.dotnet/tools  is not recognized by  zsh .", 
             "title": "zsh"
+        }, 
+        {
+            "location": "/community/", 
+            "text": "Community\n\n\nEvery developer can list their \ngenyman\n generators here. Please create a PR or create an issue for your generator to be listed!\n\n\nListing\n\n\n\n\nhttps://github.com/CaveBirdLabs/Genyman.IOSDeviceIdentifiers\n: Generates mapping between ios device identifiers and real model names", 
+            "title": "Community"
+        }, 
+        {
+            "location": "/community/#community", 
+            "text": "Every developer can list their  genyman  generators here. Please create a PR or create an issue for your generator to be listed!", 
+            "title": "Community"
+        }, 
+        {
+            "location": "/community/#listing", 
+            "text": "https://github.com/CaveBirdLabs/Genyman.IOSDeviceIdentifiers : Generates mapping between ios device identifiers and real model names", 
+            "title": "Listing"
         }
     ]
 }
