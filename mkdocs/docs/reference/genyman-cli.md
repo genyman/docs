@@ -14,6 +14,12 @@ This argument is used to use the given file as input for the code generator spec
 
 This generates a new code generator solution template.
 
+`genyman new packageId`
+
+Will generate a new configuration template for the given packageId. 
+Note that you can use the fully qualified packageId, or just the last part of the packageId.
+For example, if you packageId is `MyGreatCompany.Genyman.MyFirstGenerator` you can use `genyman new MyFirstGenerator`.
+
 ### json option
 
 `genyman new --json`
@@ -22,7 +28,7 @@ The json file format is the default format for configuration files. This option 
 
 ### file option
 
-`genyman new --file=<YOUR_FILENAME>`
+`genyman new --file <YOUR_FILENAME>`
 
 If not specified the default configuration file is created with the name `gm-genyman.json`. If you want to use another name you can use this option.
 
@@ -34,13 +40,13 @@ The deploy command will build your code generator tool, pack it to a nupkg file 
 
 ### source option
 
-`genyman deploy --source=<YOUR_NUGET_SOURCE_URL>`
+`genyman deploy --source <YOUR_NUGET_SOURCE_URL>`
 
 If you want to deploy to a private or local Nuget source, you can specify it with the source option.
 
 ### apikey option
 
-`genyman deploy --apikey=<YOUR_API_KEY>`
+`genyman deploy --apikey <YOUR_API_KEY>`
 
 When you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.
 

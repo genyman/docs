@@ -16,7 +16,7 @@ This will produce a `gm-genyman.json` file. This gives you an idea on what `geny
 {
     "genyman": {
         "packageId": "Genyman",
-        "version": "0.0.5",
+        "version": "",
         "nugetSource": ""
     },
     "configuration": {
@@ -39,7 +39,7 @@ For this tutorial we will enter the following:
 {
     "genyman": {
         "packageId": "Genyman",
-        "version": "0.0.5",
+        "version": "",
         "nugetSource": ""
     },
     "configuration": {

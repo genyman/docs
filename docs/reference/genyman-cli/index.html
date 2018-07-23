@@ -602,20 +602,24 @@
 <h2 id="new-command">New Command<a class="headerlink" href="#new-command" title="Permanent link">&para;</a></h2>
 <p><code>genyman new</code></p>
 <p>This generates a new code generator solution template.</p>
+<p><code>genyman new packageId</code></p>
+<p>Will generate a new configuration template for the given packageId. 
+Note that you can use the fully qualified packageId, or just the last part of the packageId.
+For example, if you packageId is <code>MyGreatCompany.Genyman.MyFirstGenerator</code> you can use <code>genyman new MyFirstGenerator</code>.</p>
 <h3 id="json-option">json option<a class="headerlink" href="#json-option" title="Permanent link">&para;</a></h3>
 <p><code>genyman new --json</code></p>
 <p>The json file format is the default format for configuration files. This option is now available for future support of other formats such as xml and yaml.</p>
 <h3 id="file-option">file option<a class="headerlink" href="#file-option" title="Permanent link">&para;</a></h3>
-<p><code>genyman new --file=&lt;YOUR_FILENAME&gt;</code></p>
+<p><code>genyman new --file &lt;YOUR_FILENAME&gt;</code></p>
 <p>If not specified the default configuration file is created with the name <code>gm-genyman.json</code>. If you want to use another name you can use this option.</p>
 <h2 id="deploy-command">Deploy Command<a class="headerlink" href="#deploy-command" title="Permanent link">&para;</a></h2>
 <p><code>genyman deploy</code></p>
 <p>The deploy command will build your code generator tool, pack it to a nupkg file and then push it to the specified, or default Nuget source.</p>
 <h3 id="source-option">source option<a class="headerlink" href="#source-option" title="Permanent link">&para;</a></h3>
-<p><code>genyman deploy --source=&lt;YOUR_NUGET_SOURCE_URL&gt;</code></p>
+<p><code>genyman deploy --source &lt;YOUR_NUGET_SOURCE_URL&gt;</code></p>
 <p>If you want to deploy to a private or local Nuget source, you can specify it with the source option.</p>
 <h3 id="apikey-option">apikey option<a class="headerlink" href="#apikey-option" title="Permanent link">&para;</a></h3>
-<p><code>genyman deploy --apikey=&lt;YOUR_API_KEY&gt;</code></p>
+<p><code>genyman deploy --apikey &lt;YOUR_API_KEY&gt;</code></p>
 <p>When you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.</p>
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
 <p>Following options are available for all commands.</p>
