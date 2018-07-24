@@ -187,7 +187,7 @@
         }, 
         {
             "location": "/community/", 
-            "text": "Community\n\n\nEvery developer can list their \ngenyman\n generators here. Please create a PR or create an issue for your generator to be listed!\n\n\nListing\n\n\n\n\nhttps://github.com/CaveBirdLabs/Genyman.IOSDeviceIdentifiers\n: Generates mapping between ios device identifiers and real model names", 
+            "text": "Community\n\n\nEvery developer can list their \ngenyman\n generators here. Please create a PR or create an issue for your generator to be listed!\n\n\nPackages\n\n\n\n\nGenyman CLI\n - The new command of the CLI is also a Genyman generator\n\n\nIOSDeviceIdentifiers\n - Generates mapping between ios device identifiers and real model names", 
             "title": "Community"
         }, 
         {
@@ -196,9 +196,9 @@
             "title": "Community"
         }, 
         {
-            "location": "/community/#listing", 
-            "text": "https://github.com/CaveBirdLabs/Genyman.IOSDeviceIdentifiers : Generates mapping between ios device identifiers and real model names", 
-            "title": "Listing"
+            "location": "/community/#packages", 
+            "text": "Genyman CLI  - The new command of the CLI is also a Genyman generator  IOSDeviceIdentifiers  - Generates mapping between ios device identifiers and real model names", 
+            "title": "Packages"
         }
     ]
 }
