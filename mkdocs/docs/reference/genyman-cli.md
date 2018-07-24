@@ -8,6 +8,12 @@ The cli tool is the main tool of `genyman`.
 
 This argument is used to use the given file as input for the code generator specified in that configuration file. The cli is responsible for downloading, installing and executing the genyman global tool.
 
+### update option
+
+`genyman your-config.json --update`
+
+The `update` option will perform and update of the package first.
+
 ## New Command
 
 `genyman new`
@@ -32,6 +38,12 @@ The json file format is the default format for configuration files. This option 
 
 If not specified the default configuration file is created with the name `gm-genyman.json`. If you want to use another name you can use this option.
 
+### update option
+
+`genyman new --update`
+
+The `update` option will perform and update of the package first.
+
 ## Deploy Command
 
 `genyman deploy`
@@ -50,7 +62,26 @@ If you want to deploy to a private or local Nuget source, you can specify it wit
 
 When you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.
 
-## Options
+## All Command
+
+`genyman all`
+
+Will scan the current folder for all `genyman` configuration files and will execute them all.
+
+### recursive option
+
+`genyman all --recursive`
+
+The `recursive` option will scan not only the current folder, but all subfolders as well.
+
+### update option
+
+`genyman all --update`
+
+The `update` option will perform and update of the packages first.
+
+
+## Generic Options
 
 Following options are available for all commands.
 

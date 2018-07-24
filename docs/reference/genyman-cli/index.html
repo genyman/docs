@@ -318,6 +318,19 @@
     File argument
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-option" title="update option" class="md-nav__link">
+    update option
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -338,6 +351,13 @@
           <li class="md-nav__item">
   <a href="#file-option" title="file option" class="md-nav__link">
     file option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-option_1" title="update option" class="md-nav__link">
+    update option
   </a>
   
 </li>
@@ -375,8 +395,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#all-command" title="All Command" class="md-nav__link">
+    All Command
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursive-option" title="recursive option" class="md-nav__link">
+    recursive option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-option_2" title="update option" class="md-nav__link">
+    update option
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-options" title="Generic Options" class="md-nav__link">
+    Generic Options
   </a>
   
     <nav class="md-nav">
@@ -497,6 +544,19 @@
     File argument
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-option" title="update option" class="md-nav__link">
+    update option
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -517,6 +577,13 @@
           <li class="md-nav__item">
   <a href="#file-option" title="file option" class="md-nav__link">
     file option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-option_1" title="update option" class="md-nav__link">
+    update option
   </a>
   
 </li>
@@ -554,8 +621,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#all-command" title="All Command" class="md-nav__link">
+    All Command
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursive-option" title="recursive option" class="md-nav__link">
+    recursive option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-option_2" title="update option" class="md-nav__link">
+    update option
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-options" title="Generic Options" class="md-nav__link">
+    Generic Options
   </a>
   
     <nav class="md-nav">
@@ -611,6 +705,9 @@
 <h2 id="file-argument">File argument<a class="headerlink" href="#file-argument" title="Permanent link">&para;</a></h2>
 <p><code>genyman your-config.json</code></p>
 <p>This argument is used to use the given file as input for the code generator specified in that configuration file. The cli is responsible for downloading, installing and executing the genyman global tool.</p>
+<h3 id="update-option">update option<a class="headerlink" href="#update-option" title="Permanent link">&para;</a></h3>
+<p><code>genyman your-config.json --update</code></p>
+<p>The <code>update</code> option will perform and update of the package first.</p>
 <h2 id="new-command">New Command<a class="headerlink" href="#new-command" title="Permanent link">&para;</a></h2>
 <p><code>genyman new</code></p>
 <p>This generates a new code generator solution template.</p>
@@ -624,6 +721,9 @@ For example, if you packageId is <code>MyGreatCompany.Genyman.MyFirstGenerator</
 <h3 id="file-option">file option<a class="headerlink" href="#file-option" title="Permanent link">&para;</a></h3>
 <p><code>genyman new --file &lt;YOUR_FILENAME&gt;</code></p>
 <p>If not specified the default configuration file is created with the name <code>gm-genyman.json</code>. If you want to use another name you can use this option.</p>
+<h3 id="update-option_1">update option<a class="headerlink" href="#update-option_1" title="Permanent link">&para;</a></h3>
+<p><code>genyman new --update</code></p>
+<p>The <code>update</code> option will perform and update of the package first.</p>
 <h2 id="deploy-command">Deploy Command<a class="headerlink" href="#deploy-command" title="Permanent link">&para;</a></h2>
 <p><code>genyman deploy</code></p>
 <p>The deploy command will build your code generator tool, pack it to a nupkg file and then push it to the specified, or default Nuget source.</p>
@@ -633,7 +733,16 @@ For example, if you packageId is <code>MyGreatCompany.Genyman.MyFirstGenerator</
 <h3 id="apikey-option">apikey option<a class="headerlink" href="#apikey-option" title="Permanent link">&para;</a></h3>
 <p><code>genyman deploy --apikey &lt;YOUR_API_KEY&gt;</code></p>
 <p>When you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.</p>
-<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<h2 id="all-command">All Command<a class="headerlink" href="#all-command" title="Permanent link">&para;</a></h2>
+<p><code>genyman all</code></p>
+<p>Will scan the current folder for all <code>genyman</code> configuration files and will execute them all.</p>
+<h3 id="recursive-option">recursive option<a class="headerlink" href="#recursive-option" title="Permanent link">&para;</a></h3>
+<p><code>genyman all --recursive</code></p>
+<p>The <code>recursive</code> option will scan not only the current folder, but all subfolders as well.</p>
+<h3 id="update-option_2">update option<a class="headerlink" href="#update-option_2" title="Permanent link">&para;</a></h3>
+<p><code>genyman all --update</code></p>
+<p>The <code>update</code> option will perform and update of the packages first.</p>
+<h2 id="generic-options">Generic Options<a class="headerlink" href="#generic-options" title="Permanent link">&para;</a></h2>
 <p>Following options are available for all commands.</p>
 <h3 id="overwrite">overwrite<a class="headerlink" href="#overwrite" title="Permanent link">&para;</a></h3>
 <p><code>--overwrite</code></p>
