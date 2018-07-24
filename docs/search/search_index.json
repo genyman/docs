@@ -212,7 +212,7 @@
         }, 
         {
             "location": "/community/", 
-            "text": "Community\n\n\nEvery developer can list their \ngenyman\n generators here. Please create a PR or create an issue for your generator to be listed!\n\n\nPackages\n\n\n\n\nGenyman CLI\n - The new command of the CLI is also a Genyman generator\n\n\nIOSDeviceIdentifiers\n - Generates mapping between ios device identifiers and real model names", 
+            "text": "Community\n\n\nEvery developer can list their \ngenyman\n generators here. Please create a PR or create an issue for your generator to be listed!\n\n\nPackages\n\n\n\n\nGenyman CLI\n - The new command of the CLI is also a Genyman generator\n\n\nIOSDeviceIdentifiers\n - Generates mapping between ios device identifiers and real model names\n\n\nLoco\n - Generates json files for use with https://localise.biz/ in vuejs, xamarin, ...", 
             "title": "Community"
         }, 
         {
@@ -222,7 +222,7 @@
         }, 
         {
             "location": "/community/#packages", 
-            "text": "Genyman CLI  - The new command of the CLI is also a Genyman generator  IOSDeviceIdentifiers  - Generates mapping between ios device identifiers and real model names", 
+            "text": "Genyman CLI  - The new command of the CLI is also a Genyman generator  IOSDeviceIdentifiers  - Generates mapping between ios device identifiers and real model names  Loco  - Generates json files for use with https://localise.biz/ in vuejs, xamarin, ...", 
             "title": "Packages"
         }
     ]
