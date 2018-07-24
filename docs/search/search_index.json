@@ -196,6 +196,26 @@
             "title": "String Helpers"
         }, 
         {
+            "location": "/reference/csharp-project-helpers/", 
+            "text": "CSharp Project Helpers\n\n\nWithin the Genyman Core Library there are severall helper functions to manipulate csproj (CSharp) files.\n\n\nMethods\n\n\nAdd resource\n\n\n\n\nAddXamarinIosResource\n\n\nAddXamarinAndroidResource\n\n\nAddXamarinUWPResource\n\n\n\n\nExtension methods for the given (full path) csproj folder (\nNOT!\n the csproj file itself).\n\n\nplatformProjectFolder.AddXamarinIosResource(destinationFile);\n\n\n\n\n\nThis will add the resource file to the csproj file if it doesn't exists already.", 
+            "title": "CSharp Project Helpers"
+        }, 
+        {
+            "location": "/reference/csharp-project-helpers/#csharp-project-helpers", 
+            "text": "Within the Genyman Core Library there are severall helper functions to manipulate csproj (CSharp) files.", 
+            "title": "CSharp Project Helpers"
+        }, 
+        {
+            "location": "/reference/csharp-project-helpers/#methods", 
+            "text": "", 
+            "title": "Methods"
+        }, 
+        {
+            "location": "/reference/csharp-project-helpers/#add-resource", 
+            "text": "AddXamarinIosResource  AddXamarinAndroidResource  AddXamarinUWPResource   Extension methods for the given (full path) csproj folder ( NOT!  the csproj file itself).  platformProjectFolder.AddXamarinIosResource(destinationFile);  This will add the resource file to the csproj file if it doesn't exists already.", 
+            "title": "Add resource"
+        }, 
+        {
             "location": "/troubleshooting/", 
             "text": "Troubleshooting\n\n\nzsh\n\n\nWhen using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the \n.zshrc\n file and add:\n\n\npath\n+=(\n/Users/YOUR_USER_NAME/.dotnet/tools\n)\n\n\nexport\n PATH\n\n\n\n\n\nThe normal \n~/.dotnet/tools\n is not recognized by \nzsh\n.", 
             "title": "Troubleshooting"
@@ -212,7 +232,7 @@
         }, 
         {
             "location": "/community/", 
-            "text": "Community\n\n\nEvery developer can list their \ngenyman\n generators here. Please create a PR or create an issue for your generator to be listed!\n\n\nPackages\n\n\n\n\nGenyman CLI\n - The new command of the CLI is also a Genyman generator\n\n\nIOSDeviceIdentifiers\n - Generates mapping between ios device identifiers and real model names\n\n\nLoco\n - Generates json files for use with https://localise.biz/ in vuejs, xamarin, ...", 
+            "text": "Community\n\n\nEvery developer can list their \ngenyman\n generators here. Please create a PR or create an issue for your generator to be listed!\n\n\nPackages\n\n\n\n\nGenyman CLI\n - The new command of the CLI is also a Genyman generator\n\n\nIOSDeviceIdentifiers\n - Generates mapping between ios device identifiers and real model names\n\n\nLoco\n - Generates json files for use with https://localise.biz/ in vuejs, xamarin, ...\n\n\nXamarinAssets\n - Based upon a single SVG source create all assets for iOS, Android, UWP for all resolutions.", 
             "title": "Community"
         }, 
         {
@@ -222,7 +242,7 @@
         }, 
         {
             "location": "/community/#packages", 
-            "text": "Genyman CLI  - The new command of the CLI is also a Genyman generator  IOSDeviceIdentifiers  - Generates mapping between ios device identifiers and real model names  Loco  - Generates json files for use with https://localise.biz/ in vuejs, xamarin, ...", 
+            "text": "Genyman CLI  - The new command of the CLI is also a Genyman generator  IOSDeviceIdentifiers  - Generates mapping between ios device identifiers and real model names  Loco  - Generates json files for use with https://localise.biz/ in vuejs, xamarin, ...  XamarinAssets  - Based upon a single SVG source create all assets for iOS, Android, UWP for all resolutions.", 
             "title": "Packages"
         }
     ]

@@ -42,5 +42,6 @@ pages:
     - 'Genyman Cli': 'reference/genyman-cli.md'
     - 'Genyman Core': 'reference/genyman-core.md'
     - 'Handlebars Helpers': 'reference/handlebars-helpers.md'
+    - 'CSharp Project Helpers': 'reference/csharp-project-helpers.md'
 - 'Troubleshooting': 'troubleshooting.md'
 - 'Community': 'community.md'
