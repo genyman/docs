@@ -13,7 +13,7 @@
         <meta name="description" content="Genyman - A .net core cli code generator">
       
       
-        <link rel="canonical" href="https://genyman.github.io/reference/csharp-project-helpers/">
+        <link rel="canonical" href="https://genyman.github.io/reference/fluent-msbuild/">
       
       
         <meta name="author" content="Stefan de Vogelaere">
@@ -42,7 +42,7 @@
     
     
       
-        <title>CSharp Project Helpers - Genyman</title>
+        <title>FluentMSBuild - Genyman</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#csharp-project-helpers" tabindex="1" class="md-skip">
+      <a href="#fluentmsbuild" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Genyman
               </span>
               <span class="md-header-nav__topic">
-                CSharp Project Helpers
+                FluentMSBuild
               </span>
             
           
@@ -332,11 +332,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        CSharp Project Helpers
+        FluentMSBuild
       </label>
     
-    <a href="./" title="CSharp Project Helpers" class="md-nav__link md-nav__link--active">
-      CSharp Project Helpers
+    <a href="./" title="FluentMSBuild" class="md-nav__link md-nav__link--active">
+      FluentMSBuild
     </a>
     
       
@@ -350,22 +350,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods" title="Methods" class="md-nav__link">
-    Methods
+  <a href="#samples" title="Samples" class="md-nav__link">
+    Samples
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-resource" title="Add resource" class="md-nav__link">
-    Add resource
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -430,22 +417,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods" title="Methods" class="md-nav__link">
-    Methods
+  <a href="#samples" title="Samples" class="md-nav__link">
+    Samples
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-resource" title="Add resource" class="md-nav__link">
-    Add resource
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -465,24 +439,19 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/genyman/docs/edit/master/mkdocs/docs/reference/csharp-project-helpers.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/genyman/docs/edit/master/mkdocs/docs/reference/fluent-msbuild.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="csharp-project-helpers">CSharp Project Helpers<a class="headerlink" href="#csharp-project-helpers" title="Permanent link">&para;</a></h1>
-<p>Within the Genyman Core Library there are severall helper functions to manipulate csproj (CSharp) files.</p>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
-<h3 id="add-resource">Add resource<a class="headerlink" href="#add-resource" title="Permanent link">&para;</a></h3>
-<ul>
-<li>AddXamarinIosResource</li>
-<li>AddXamarinAndroidResource</li>
-<li>AddXamarinUWPResource</li>
-</ul>
-<p>Extension methods for the given (full path) csproj folder (<strong>NOT!</strong> the csproj file itself).</p>
-<div class="codehilite"><pre><span></span>platformProjectFolder.AddXamarinIosResource(destinationFile);
+                <h1 id="fluentmsbuild">FluentMSBuild<a class="headerlink" href="#fluentmsbuild" title="Permanent link">&para;</a></h1>
+<p>Within the Genyman Core Library there are severall helper functions to manipulate csproj (CSharp) files. There is a fluent helper to do some basic stuff.</p>
+<h2 id="samples">Samples<a class="headerlink" href="#samples" title="Permanent link">&para;</a></h2>
+<p>Adding (if it not exists) of a file into a project (or shared project).</p>
+<div class="codehilite"><pre><span></span>FluentMSBuild.Use(destinationFile).WithBuildAction(BuildAction.ImageAsset).AddToProject();
 </pre></div>
 
 
-<p>This will add the resource file to the csproj file if it doesn't exists already.</p>
+<p>This will add the destinationFile into the underlying project (destinationFile is for example a cs file or image). The method will look for a csproj (or shared project) in the directory tree above. Next it can be set a BuildAction (like Content, Compile, etc). Finish with the AddToProject method.</p>
+<p>The builder is self explaining. If not, drop a question.</p>
                 
                   
                 

@@ -16,12 +16,12 @@ This will produce a `gm-genyman.json` file. This gives you an idea on what `geny
 {
     "genyman": {
         "packageId": "Genyman",
-        "version": "",
-        "nugetSource": ""
+        "info": "This is a Genyman configuration file - https://genyman.github.io/docs/"
     },
     "configuration": {
         "prefix": "YourPrefix",
-        "toolName": "YourToolName"
+        "toolName": "YourToolName",
+        "description": "Another great Genyman generator!"
     }
 }
 ```
@@ -32,6 +32,7 @@ The second structure is `configuration`. Hereunder you will find the specific co
 
 - `prefix`: this is actually the prefix used in the package identifier, mostly the username or organization name of the pacakge.
 - `toolName`: the specific name of the code generator you are going to build.
+- `description`: a description of what the tool does.
 
 For this tutorial we will enter the following:
 
@@ -39,12 +40,12 @@ For this tutorial we will enter the following:
 {
     "genyman": {
         "packageId": "Genyman",
-        "version": "",
-        "nugetSource": ""
+        "info": "This is a Genyman configuration file - https://genyman.github.io/docs/"
     },
     "configuration": {
         "prefix": "Tutorial",
-        "toolName": "FirstGenerator"
+        "toolName": "FirstGenerator",
+        "description": "Another great Genyman generator!"
     }
 }
 ```
@@ -56,6 +57,14 @@ As said, the `new` command from the genyman cli itself is a generator. The way y
 ``` bash
 genyman gm-genyman.json
 ```
+
+Alternative is to run
+
+``` bash
+genyman all
+```
+
+This will generate all generators in the current directory.
 
 This will create a `src` folder which contains a template solution for you to create a new code generator.
 
@@ -95,7 +104,7 @@ This will later produce a configuration file with these values pre-filled.
 Finally, the `Generator.cs` is the location where the real work has to be done. Following skeleton is your starting point:
 
 ``` csharp
-public class Generator : GenymanGenerator<Configuration>
+internal class Generator : GenymanGenerator<Configuration>
 {
 	public override void Execute()
 	{
@@ -119,7 +128,7 @@ For this tutorial we will add a simple csharp file.
 ``` csharp
 namespace OurGenyman.Tutorial;
 {
-	public class Sample
+	internal class Sample
 	{
 		public string FirstValue = "{{ Value1 }}";
 		public string SecondValue = "{{ Value2 }}";

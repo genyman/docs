@@ -62,6 +62,12 @@ If you want to deploy to a private or local Nuget source, you can specify it wit
 
 When you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.
 
+### major, minor, build option
+
+`genyman deploy --major`
+
+Before deployment using these options you can automatically increase a part of the version. If not specified `--build` is added by default.
+
 ## All Command
 
 `genyman all`
@@ -79,6 +85,22 @@ The `recursive` option will scan not only the current folder, but all subfolders
 `genyman all --update`
 
 The `update` option will perform and update of the packages first.
+
+## Doc Command
+
+`genyman doc`
+
+or
+
+`genyman doc packageId`
+
+will print all properties and classes of the configuration of the generator.
+
+### md option
+
+You can even create a Markdown file if you specify a file name together with this option:
+
+`genyman doc --md README.md`
 
 
 ## Generic Options

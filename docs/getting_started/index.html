@@ -408,8 +408,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../reference/csharp-project-helpers/" title="CSharp Project Helpers" class="md-nav__link">
-      CSharp Project Helpers
+    <a href="../reference/fluent-msbuild/" title="FluentMSBuild" class="md-nav__link">
+      FluentMSBuild
     </a>
   </li>
 
@@ -550,12 +550,12 @@
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;genyman&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;packageId&quot;</span><span class="p">:</span> <span class="s2">&quot;Genyman&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nugetSource&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a Genyman configuration file - https://genyman.github.io/docs/&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;YourPrefix&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;toolName&quot;</span><span class="p">:</span> <span class="s2">&quot;YourToolName&quot;</span>
+        <span class="nt">&quot;toolName&quot;</span><span class="p">:</span> <span class="s2">&quot;YourToolName&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Another great Genyman generator!&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -566,17 +566,18 @@
 <ul>
 <li><code>prefix</code>: this is actually the prefix used in the package identifier, mostly the username or organization name of the pacakge.</li>
 <li><code>toolName</code>: the specific name of the code generator you are going to build.</li>
+<li><code>description</code>: a description of what the tool does.</li>
 </ul>
 <p>For this tutorial we will enter the following:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;genyman&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;packageId&quot;</span><span class="p">:</span> <span class="s2">&quot;Genyman&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nugetSource&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a Genyman configuration file - https://genyman.github.io/docs/&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;Tutorial&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;toolName&quot;</span><span class="p">:</span> <span class="s2">&quot;FirstGenerator&quot;</span>
+        <span class="nt">&quot;toolName&quot;</span><span class="p">:</span> <span class="s2">&quot;FirstGenerator&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Another great Genyman generator!&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -588,6 +589,12 @@
 </pre></div>
 
 
+<p>Alternative is to run</p>
+<div class="codehilite"><pre><span></span>genyman all
+</pre></div>
+
+
+<p>This will generate all generators in the current directory.</p>
 <p>This will create a <code>src</code> folder which contains a template solution for you to create a new code generator.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>If you take a look at the solution, you will find an <code>Implementation</code> folder with a <code>Configuration.cs</code> file. This is a placeholder class for your configuration parameters. Just like the configuration parameters we had to fill in for our new template. Basically you just add public properties to this class. Later these properties will be translated to parameters in you configuration file.</p>
@@ -616,7 +623,7 @@
 <p>This will later produce a configuration file with these values pre-filled.</p>
 <h2 id="generator">Generator<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h2>
 <p>Finally, the <code>Generator.cs</code> is the location where the real work has to be done. Following skeleton is your starting point:</p>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Generator</span> <span class="p">:</span> <span class="n">GenymanGenerator</span><span class="p">&lt;</span><span class="n">Configuration</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="k">internal</span> <span class="k">class</span> <span class="nc">Generator</span> <span class="p">:</span> <span class="n">GenymanGenerator</span><span class="p">&lt;</span><span class="n">Configuration</span><span class="p">&gt;</span>
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Execute</span><span class="p">()</span>
     <span class="p">{</span>
@@ -633,7 +640,7 @@
 <p>For this tutorial we will add a simple csharp file.</p>
 <div class="codehilite"><pre><span></span><span class="k">namespace</span> <span class="nn">OurGenyman.Tutorial</span><span class="p">;</span>
 <span class="p">{</span>
-    <span class="k">public</span> <span class="k">class</span> <span class="nc">Sample</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="nc">Sample</span>
     <span class="p">{</span>
         <span class="k">public</span> <span class="kt">string</span> <span class="n">FirstValue</span> <span class="p">=</span> <span class="s">&quot;{{ Value1 }}&quot;</span><span class="p">;</span>
         <span class="k">public</span> <span class="kt">string</span> <span class="n">SecondValue</span> <span class="p">=</span> <span class="s">&quot;{{ Value2 }}&quot;</span><span class="p">;</span>

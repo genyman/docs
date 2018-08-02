@@ -8,3 +8,5 @@ Every developer can list their `genyman` generators here. Please create a PR or 
 - [IOSDeviceIdentifiers](https://github.com/CaveBirdLabs/Genyman.IOSDeviceIdentifiers) - Generates mapping between ios device identifiers and real model names
 - [Loco](https://github.com/stefandevo/Genyman.Loco) - Generates json files for use with https://localise.biz/ in vuejs, xamarin, ...
 - [XamarinAssets](https://github.com/stefandevo/Genyman.XamarinAssets) - Based upon a single SVG source create all assets for iOS, Android, UWP for all resolutions.
+- [XamarinIcons](https://github.com/stefandevo/Genyman.XamarinIcons) - Based upon a single SVG source create all icons for iOS, Android, UWP for all resolutions.
+- [XamarinViewModel](https://github.com/stefandevo/Genyman.XamarinViewModel) - Generating boilerplate code for (mobile)ViewModels with Genyman.

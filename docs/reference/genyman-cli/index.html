@@ -389,6 +389,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#major-minor-build-option" title="major, minor, build option" class="md-nav__link">
+    major, minor, build option
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -412,6 +419,26 @@
           <li class="md-nav__item">
   <a href="#update-option_2" title="update option" class="md-nav__link">
     update option
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doc-command" title="Doc Command" class="md-nav__link">
+    Doc Command
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#md-option" title="md option" class="md-nav__link">
+    md option
   </a>
   
 </li>
@@ -496,8 +523,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../csharp-project-helpers/" title="CSharp Project Helpers" class="md-nav__link">
-      CSharp Project Helpers
+    <a href="../fluent-msbuild/" title="FluentMSBuild" class="md-nav__link">
+      FluentMSBuild
     </a>
   </li>
 
@@ -627,6 +654,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#major-minor-build-option" title="major, minor, build option" class="md-nav__link">
+    major, minor, build option
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -650,6 +684,26 @@
           <li class="md-nav__item">
   <a href="#update-option_2" title="update option" class="md-nav__link">
     update option
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doc-command" title="Doc Command" class="md-nav__link">
+    Doc Command
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#md-option" title="md option" class="md-nav__link">
+    md option
   </a>
   
 </li>
@@ -745,6 +799,9 @@ For example, if you packageId is <code>MyGreatCompany.Genyman.MyFirstGenerator</
 <h3 id="apikey-option">apikey option<a class="headerlink" href="#apikey-option" title="Permanent link">&para;</a></h3>
 <p><code>genyman deploy --apikey &lt;YOUR_API_KEY&gt;</code></p>
 <p>When you deploy to a Nuget source that needs an API key to publish, you need to specificy this option.</p>
+<h3 id="major-minor-build-option">major, minor, build option<a class="headerlink" href="#major-minor-build-option" title="Permanent link">&para;</a></h3>
+<p><code>genyman deploy --major</code></p>
+<p>Before deployment using these options you can automatically increase a part of the version. If not specified <code>--build</code> is added by default.</p>
 <h2 id="all-command">All Command<a class="headerlink" href="#all-command" title="Permanent link">&para;</a></h2>
 <p><code>genyman all</code></p>
 <p>Will scan the current folder for all <code>genyman</code> configuration files and will execute them all.</p>
@@ -754,6 +811,14 @@ For example, if you packageId is <code>MyGreatCompany.Genyman.MyFirstGenerator</
 <h3 id="update-option_2">update option<a class="headerlink" href="#update-option_2" title="Permanent link">&para;</a></h3>
 <p><code>genyman all --update</code></p>
 <p>The <code>update</code> option will perform and update of the packages first.</p>
+<h2 id="doc-command">Doc Command<a class="headerlink" href="#doc-command" title="Permanent link">&para;</a></h2>
+<p><code>genyman doc</code></p>
+<p>or</p>
+<p><code>genyman doc packageId</code></p>
+<p>will print all properties and classes of the configuration of the generator.</p>
+<h3 id="md-option">md option<a class="headerlink" href="#md-option" title="Permanent link">&para;</a></h3>
+<p>You can even create a Markdown file if you specify a file name together with this option:</p>
+<p><code>genyman doc --md README.md</code></p>
 <h2 id="generic-options">Generic Options<a class="headerlink" href="#generic-options" title="Permanent link">&para;</a></h2>
 <p>Following options are available for all commands.</p>
 <h3 id="overwrite">overwrite<a class="headerlink" href="#overwrite" title="Permanent link">&para;</a></h3>
