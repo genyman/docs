@@ -227,7 +227,7 @@
         }, 
         {
             "location": "/troubleshooting/", 
-            "text": "Troubleshooting\n\n\nzsh\n\n\nWhen using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the \n.zshrc\n file and add:\n\n\npath\n+=(\n/Users/YOUR_USER_NAME/.dotnet/tools\n)\n\n\nexport\n PATH\n\n\n\n\n\nThe normal \n~/.dotnet/tools\n is not recognized by \nzsh\n.", 
+            "text": "Troubleshooting\n\n\nzsh\n\n\nWhen using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the \n.zshrc\n file and add:\n\n\nexport\n \nPATH\n=\n$HOME\n/.dotnet/tools:\n$PATH\n\n\n\n\n\n\nThe normal \n~/.dotnet/tools\n is not recognized by \nzsh\n.", 
             "title": "Troubleshooting"
         }, 
         {
@@ -237,7 +237,7 @@
         }, 
         {
             "location": "/troubleshooting/#zsh", 
-            "text": "When using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the  .zshrc  file and add:  path +=( /Users/YOUR_USER_NAME/.dotnet/tools )  export  PATH  The normal  ~/.dotnet/tools  is not recognized by  zsh .", 
+            "text": "When using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the  .zshrc  file and add:  export   PATH = $HOME /.dotnet/tools: $PATH   The normal  ~/.dotnet/tools  is not recognized by  zsh .", 
             "title": "zsh"
         }, 
         {

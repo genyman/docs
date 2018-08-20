@@ -443,8 +443,7 @@
                 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
 <h2 id="zsh">zsh<a class="headerlink" href="#zsh" title="Permanent link">&para;</a></h2>
 <p>When using https://ohmyz.sh/ there is currently an issue with using Global Tools in .net core 2.1 and MacOS. For the global tools to work you need to edit the <code>.zshrc</code> file and add:</p>
-<div class="codehilite"><pre><span></span><span class="nv">path</span><span class="o">+=(</span><span class="s1">&#39;/Users/YOUR_USER_NAME/.dotnet/tools&#39;</span><span class="o">)</span>
-<span class="nb">export</span> PATH
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.dotnet/tools:<span class="nv">$PATH</span>
 </pre></div>
 
 
